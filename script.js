@@ -351,4 +351,82 @@ if (isConfirmed) {
     console.log("You chose to cancel.");
 }
 
+// Loops in JavaScript
+// For loop: Executes a block of code a specified number of times.
+// Syntax: for (initialization; condition; increment) { // code to be executed }
+for (let i = 0; i < 5; i++) {
+    console.log("For Loop Iteration:", i);
+}
+
+// While loop: Executes a block of code as long as a specified condition is true.
+// Syntax: while (condition) { // code to be executed }
+let j = 0;
+while (j < 5) {
+    console.log("While Loop Iteration:", j);
+    j++;
+}
+
+// Do-while loop: Executes a block of code at least once, 
+// and then continues to execute as long as a specified condition is true.
+// Syntax: do { // code to be executed } while (condition);
+let k = 0;
+do {
+    console.log("Do-While Loop Iteration:", k);
+    k++;
+} while (k < 5);
+
+// Printing "Suraj Bhardwaj" 5 times using a for loop
+for (let i = 0; i < 5; i++) {
+    console.log("Suraj Bhardwaj");
+}
+
+// Print S using * and for loop
+let size = 5; // Size of the letter S
+for (let i = 0; i < size; i++) {
+    if (i === 0 || i === Math.floor(size / 2) || i === size - 1) {
+        console.log("*".repeat(size)); // Print a full line of *
+    } else if (i < Math.floor(size / 2)) {
+        console.log("*"); // Print * at the beginning of the line
+    } else {
+        console.log(" ".repeat(size - 1) + "*"); // Print * at the end of the line
+    }
+}
+
+// Infinite loop : Do not run this code as it will cause your browser to crash
+// while (true) {
+//     console.log("This is an infinite loop!");
+// }
+
+// INfinite loop using for loop
+// for (;;) {
+//     console.log("This is an infinite loop!");
+// }
+
+// for-of loop: Used to iterate over iterable objects like arrays, strings, etc.
+// Helps us in looping through the elements of an array or characters of 
+// a string without needing to manage the index variable.
+// Syntax: for (variable of iterable) { // code to be executed }
+let fruits = ["Apple", "Banana", "Cherry"];
+for (let fruit of fruits) {
+    console.log("Fruit:", fruit);
+}
+
+let myName = "Suraj Bhardwaj";
+for (let char of myName) {
+    console.log("Character:", char);
+}
+
+// for-in loop: Used to iterate over the properties of an object.
+// Helps us in looping through the keys of an object and accessing their
+// corresponding values.
+// Syntax: for (variable in object) { // code to be executed }
+let person = { name: "Suraj", age: 25, city: "New York" };
+for (let key in person) {
+    console.log(key + ": " + person[key]);
+}
+
+let car = { make: "Toyota", model: "Camry", year: 2020 };
+for (let property in car) {
+    console.log("Key: " + property + ", Value: " + car[property]);
+}
 
