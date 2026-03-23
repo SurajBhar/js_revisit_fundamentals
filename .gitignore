@@ -1,0 +1,10 @@
+# Ignore IDE and editor specific files
+.idea/
+.vscode/
+*.log
+*.tmp
+*.bak
+*.swp
+.DS_Store
+.codex/
+

@@ -1,18 +1,50 @@
-How to run a Javascript code on Browser?
+# JavaScript Tutorials
 
-We need to create a html file in order to display information on the browsser.
+This repository is a small browser-based JavaScript practice repo. The HTML files live in `pages/` and the JavaScript files live in `scripts/`.
 
-HTML files are the files where we define the structure of the webpages.
-(Information display)
+## Current Structure
 
-HTML file has a direct connection with our browser. But we also want that our Javascript file also have a connection with the browser.
-Javascript has a direct connection with the browser in the form of console.
-
-But we generally use HTML to establish an indirect connection of our javascript code with the browser.
-
-To do this we use script tags in html: <script></script>
-
-Boiler late code for HTML in VS Code:
+```text
+.
+├── pages/
+│   ├── index.html
+│   └── strings.html
+├── scripts/
+│   ├── script.js
+│   └── strings.js
+├── README.md
+└── .codex/
+    └── STATE.md
 ```
-Shift + ! # This combination generates a boiler plate code for html in VSCode.
+
+## How It Works
+
+- Open an HTML file from `pages/` in the browser.
+- Each page loads its matching JavaScript file from `scripts/`.
+- Because the HTML files are inside `pages/`, the script path must go up one level first.
+
+Examples:
+
+- `pages/index.html` uses `../scripts/script.js`
+- `pages/strings.html` uses `../scripts/strings.js`
+
+## Script Tag Pattern
+
+Recommended pattern:
+
+```html
+<head>
+  <script defer src="../scripts/script.js"></script>
+</head>
 ```
+
+This works well because:
+
+- the relative path is correct from the HTML file location
+- `defer` waits until the HTML is parsed before running the script
+- the browser can open the file directly with `file://` for simple practice cases like this repo
+
+## Notes
+
+- The JavaScript output for this repo is mainly visible in the browser console.
+- If you later use modules, `fetch()`, or other features that are stricter under `file://`, use a local server instead of opening the files directly.
